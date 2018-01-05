@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CustomerManagement</title>
+    <title><%= yield(:title) %> | Customer Management</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header id="header">
+      <h1>Customer Management</h1>
+    </header>
+
+    <div id="yield">
+      <%= yield %>
+    </div>
+
+    <footer>
+      <h2>footer</h2>
+    </footer>
   </body>
 </html>

@@ -15,3 +15,26 @@
  */
 
 @import "bootstrap";
+
+#header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:10;
+  background-color:black;
+  color:white;
+}
+
+#yield{
+  padding:100px 50px;
+}
+
+footer{
+  position:fixed;
+  bottom:0;
+  left:0;
+  z-index:10;
+  background-color:gray;
+  width:100%;
+}

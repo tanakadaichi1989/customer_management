@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'customer/index'
+  get '/customers' => 'customer#index'
 
   get 'customer/new'
 
-  get 'staff/home'
+  get '/' => 'staff#home'
 
   get 'staff/new'
 
