@@ -1,24 +1,25 @@
-# README
+# customer_management
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Staffモデル
+|カラム|型|
+|-|-|
+|name|String|
+|email|String|
+|password|String|
 
-Things you may want to cover:
+## Customerモデル
+|カラム|型|
+|-|-|
+|name|String|
+|company|String|
+|telephone|Integer|
+|email|String|
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Contactモデル
+|カラム|型|
+|-|-|
+|staff_id|Integer|
+|customer_id|Integer|
+|contact_day|Date|
+|contact_way|String|
+|memo|text|
