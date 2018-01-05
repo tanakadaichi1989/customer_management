@@ -1,5 +1,17 @@
 # customer_management
 
+## Staffコントローラ
+・新規登録
+・ログイン/ログオフ機能
+
+## Customerコントローラ
+・新規登録
+
+## Contactコントローラ
+・接触内容の登録
+・接触内容の編集
+
+
 ## Staffモデル
 |カラム|型|
 |-|-|
@@ -23,3 +35,7 @@
 |contact_day|Date|
 |contact_way|String|
 |memo|text|
+
+## 利用する技術
+BootStrap
+BCRypt
