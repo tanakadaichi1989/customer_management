@@ -27,7 +27,7 @@ class StaffController < ApplicationController
       flash[:notice] = "Successed Log In."
       redirect_to("/")
     else
-      @errors = @staff.errors
+      @errors = "Comfirm Email or Password."
       render "staff/login_form"
     end
   end

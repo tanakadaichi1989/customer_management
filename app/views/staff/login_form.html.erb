@@ -6,9 +6,7 @@
 
 <% if @errors %>
 <div class="alert alert-danger">
-  <% @errors.full_messages.each do |message| %>
-    <%= message %><br>
-  <% end %>
+    <%= @errors %><br>
 </div>
 <% end %>
 

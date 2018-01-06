@@ -14,23 +14,21 @@
 
 
 <%= form_tag("/signup",method:"post") do %>
-<div class="input">
-<input type="" name="name" placeholder="name">
-</div>
+    <div class="input">
+    <input type="" name="name" placeholder="name">
+    </div>
 
-<div class="input">
-<input type="" name="email" placeholder="email">
-</div>
+    <div class="input">
+    <input type="" name="email" placeholder="email">
+    </div>
 
-<div class="input">
-<input type="password" name="password" placeholder="password">
-</div>
+    <div class="input">
+    <input type="password" name="password" placeholder="password">
+    </div>
 
-<div>
-<input type="submit" class="btn btn-primary" value="<%= yield(:button) %>">
-</div>
-
-
+    <div>
+    <input type="submit" class="btn btn-primary" value="<%= yield(:button) %>">
+    </div>
 <% end %>
 
-<a href="/login" class="badge badge-light">Log In</a>
+<a href="/login">Log In →</a>
