@@ -17,12 +17,16 @@
         Menu
       </button>
       <div class="dropdown-menu">
+        <% if @current_staff != nil %>
+        <a class="dropdown-item" href="#"><%= @current_staff.name %></a>
         <a class="dropdown-item" href="/">Home</a>
         <a class="dropdown-item" href="/customers">Cutomers</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Log out</a>
+        <%= link_to("Log out","/logout",method:"post",class: "dropdown-item") %>
+        <% else %>
         <a class="dropdown-item" href="/login">Log in</a>
         <a class="dropdown-item" href="/signup">Sign up</a>
+        <% end %>
       </div>
     </div>
     </header>

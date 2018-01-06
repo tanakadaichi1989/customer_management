@@ -1,4 +1,7 @@
 class StaffController < ApplicationController
+
+  before_action :set_current_staff
+
   def home
   end
 
@@ -24,11 +27,18 @@ class StaffController < ApplicationController
     @staff = Staff.find_by(email: params[:email], password: params[:password])
 
     if @staff
-      flash[:notice] = "Successed Log In."
+      session[:user_id] = @staff.id
+      flash[:notice] = "Successed Log in."
       redirect_to("/")
     else
       @errors = "Comfirm Email or Password."
       render "staff/login_form"
     end
+  end
+
+  def logout
+    session[:user_id] = nil
+    flash[:notice] = "Successed Log out."
+    redirect_to("/login")
   end
 end
