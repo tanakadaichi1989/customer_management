@@ -16,3 +16,7 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+
+$(function(){
+  $('#flash').delay(5000).slideUp();
+});

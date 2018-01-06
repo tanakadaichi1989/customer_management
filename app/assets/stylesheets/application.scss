@@ -26,6 +26,13 @@
   color:white;
 }
 
+#flash{
+  position:fixed;
+  top:60px;
+  left:50px;
+  width:900px;
+}
+
 #yield{
   padding:100px 50px;
 }
@@ -37,4 +44,15 @@ footer{
   z-index:10;
   background-color:gray;
   width:100%;
+}
+
+form{
+  input[type=""],input[type="password"]{
+    width:300px;
+  }
+
+  .input{
+    margin-top:10px;
+    margin-bottom:10px;
+    }
 }

@@ -1,8 +1,8 @@
 
-<% provide(:title, "Sign Up") %>
-<% provide(:button, "Sign Up") %>
+<% provide(:title, "Log In") %>
+<% provide(:button, "Log In") %>
 
-<h1>Sing Up</h1>
+<h1>Log In</h1>
 
 <% if @errors %>
 <div class="alert alert-danger">
@@ -13,10 +13,7 @@
 <% end %>
 
 
-<%= form_tag("/signup",method:"post") do %>
-<div class="input">
-<input type="" name="name" placeholder="name">
-</div>
+<%= form_tag("/login",method:"post") do %>
 
 <div class="input">
 <input type="" name="email" placeholder="email">
@@ -32,5 +29,3 @@
 
 
 <% end %>
-
-<a href="/login" class="badge badge-light">Log In</a>
