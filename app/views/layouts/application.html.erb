@@ -11,6 +11,20 @@
   <body>
     <header id="header">
       <h1>Customer Management</h1>
+
+      <div class="btn-group" id="header-list">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Menu
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/">Home</a>
+        <a class="dropdown-item" href="/customers">Cutomers</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Log out</a>
+        <a class="dropdown-item" href="/login">Log in</a>
+        <a class="dropdown-item" href="/signup">Sign up</a>
+      </div>
+    </div>
     </header>
 
     <% if flash[:notice] %>

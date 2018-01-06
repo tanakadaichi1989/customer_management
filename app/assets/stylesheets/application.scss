@@ -24,6 +24,16 @@
   z-index:10;
   background-color:black;
   color:white;
+
+  h1{
+    float:left;
+    margin-left:10px;
+  }
+
+  #header-list{
+    float:right;
+    margin:10px;
+  }
 }
 
 #flash{
