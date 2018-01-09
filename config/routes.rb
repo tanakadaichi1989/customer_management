@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 
   get 'contact/edit'
 
-  get '/customers/new' => 'customer#new'
+  get '/register' => 'customer#new'
+
+  post '/register' => 'customer#create'
 
   get '/customers' => 'customer#index'
 

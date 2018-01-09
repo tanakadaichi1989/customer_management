@@ -1,2 +1,35 @@
-<h1>Customer#new</h1>
-<p>Find me in app/views/customer/new.html.erb</p>
+<% provide(:title, "Register New Customer") %>
+<% provide(:button, "register") %>
+
+<h1>Register New Customer</h1>
+
+<% if @errors %>
+<div class="alert alert-danger">
+  <% @errors.full_messages.each do |message| %>
+    <%= message %><br>
+  <% end %>
+</div>
+<% end %>
+
+
+<%= form_tag("/register",method:"post") do %>
+    <div class="input">
+    <input type="" name="name" placeholder="name">
+    </div>
+
+    <div class="input">
+    <input type="" name="email" placeholder="email">
+    </div>
+
+    <div class="input">
+    <input type="" name="telephone" placeholder="email">
+    </div>
+
+    <div>
+    <input type="" name="address" placeholder="address">
+    </div>
+
+    <div>
+    <input type="submit" class="btn btn-primary" value="<%= yield(:button) %>">
+    </div>
+<% end %>

@@ -20,7 +20,7 @@
         <% if @current_staff != nil %>
         <a class="dropdown-item" href="#"><%= @current_staff.name %></a>
         <a class="dropdown-item" href="/">Home</a>
-        <a class="dropdown-item" href="/customers/new">New Customer Register</a>
+        <a class="dropdown-item" href="/register">Register New Customer</a>
         <a class="dropdown-item" href="/customers">Customers</a>
         <div class="dropdown-divider"></div>
         <%= link_to("Log out","/logout",method:"post",class: "dropdown-item") %>

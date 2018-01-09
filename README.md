@@ -26,6 +26,7 @@
 |company|String|
 |telephone|Integer|
 |email|String|
+|address|String|
 
 ## Contactモデル
 |カラム|型|
