@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+    get '/' => 'staff#home'
+
   get 'contact/index'
 
   get 'contact/show'
@@ -7,11 +9,10 @@ Rails.application.routes.draw do
 
   get 'contact/edit'
 
+  get '/customers/new' => 'customer#new'
+
   get '/customers' => 'customer#index'
 
-  get 'customer/new'
-
-  get '/' => 'staff#home'
 
   get '/signup' => "staff#new"
 
