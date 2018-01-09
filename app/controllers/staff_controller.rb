@@ -1,6 +1,8 @@
 class StaffController < ApplicationController
 
   before_action :set_current_staff
+  before_action :authenticate_staff,only:[:home,:logout]
+  before_action :forbid_login_staff,only:[:login_form,:login]
 
   def home
   end
@@ -40,5 +42,12 @@ class StaffController < ApplicationController
     session[:user_id] = nil
     flash[:notice] = "Successed Log out."
     redirect_to("/login")
+  end
+
+  def forbid_login_staff
+    if @current_staff
+      flash[:info] = "You are already login."
+      redirect_to("/")
+    end
   end
 end
