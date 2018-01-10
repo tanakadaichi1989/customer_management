@@ -1,5 +1,5 @@
 <% provide(:title, "Register New Customer") %>
-<% provide(:button, "register") %>
+<% provide(:button, "Register") %>
 
 <h1>Register New Customer</h1>
 
@@ -15,6 +15,10 @@
 <%= form_tag("/register",method:"post") do %>
     <div class="input">
     <input type="" name="name" placeholder="name">
+    </div>
+
+    <div class="input">
+    <input type="" name="company" placeholder="company">
     </div>
 
     <div class="input">

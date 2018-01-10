@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-    get '/' => 'staff#home'
+  get '/' => 'staff#home'
 
   get 'contact/index'
 
@@ -13,7 +13,16 @@ Rails.application.routes.draw do
 
   post '/register' => 'customer#create'
 
-  get '/customers' => 'customer#index'
+
+
+   get '/customers' => 'customer#index'
+
+
+   get '/customers/:id' => "customer#show"
+
+  get '/customers/:id/edit' => "customer#edit"
+
+  post '/customers/:id/update' => "customer#update"
 
 
   get '/signup' => "staff#new"

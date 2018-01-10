@@ -1,9 +1,19 @@
 <%  provide(:title,"Customers") %>
 
 <h1>Customers</h1>
-<p>Find me in app/views/customer/index.html.erb</p>
 
 
-<% @customers.each do |customer| %>
-<%= customer %>
-<% end %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Company</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @customers.each do |customer| %>
+    <tr>
+        <td><%= link_to(customer.company,"/customers/#{customer.id}") %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

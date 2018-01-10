@@ -1,0 +1,39 @@
+<% provide(:title,"Edit Customer Info") %>
+<% provide(:button, "Update") %>
+
+<h1>Edit Customer Info</h1>
+
+<% if @errors %>
+<div class="alert alert-danger">
+  <% @errors.full_messages.each do |message| %>
+    <%= message %><br>
+  <% end %>
+</div>
+<% end %>
+
+
+<%= form_tag("/customers/#{@customer.id}/update",method:"post") do %>
+    <div class="input">
+    <input type="" name="name" placeholder="name" value="<%= @customer.name %>">
+    </div>
+
+    <div class="input">
+    <input type="" name="company" placeholder="company" value="<%= @customer.company%>">
+    </div>
+
+    <div class="input">
+    <input type="" name="email" placeholder="email" value="<%= @customer.email%>">
+    </div>
+
+    <div class="input">
+    <input type="" name="telephone" placeholder="telephone" value="<%= @customer.telephone%>">
+    </div>
+
+    <div>
+    <input type="" name="address" placeholder="address" value="<%= @customer.address%>">
+    </div>
+
+    <div>
+    <input type="submit" class="btn btn-primary" value="<%= yield(:button) %>">
+    </div>
+<% end %>

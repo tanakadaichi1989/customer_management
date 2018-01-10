@@ -7,11 +7,15 @@ class CustomerController < ApplicationController
   end
 
   def new
-    @customer = Customer.new(name: params[:name], email: params[:email], telephone: params[:telephone], address: params[:address])
+    @customer = Customer.new(name: params[:name], company: params[:compnay], email: params[:email], telephone: params[:telephone], address: params[:address])
+  end
+
+  def show
+    @customer = Customer.find_by(id: params[:id])
   end
 
   def create
-    @customer = Customer.new(name: params[:name], email: params[:email], telephone: params[:telephone], address: params[:address])
+    @customer = Customer.new(name: params[:name], company: params[:company], email: params[:email], telephone: params[:telephone], address: params[:address])
 
     if @customer.save
       flash[:notice] = "Successed register new customer."
@@ -23,5 +27,18 @@ class CustomerController < ApplicationController
   end
 
   def edit
+    @customer = Customer.find_by(id: params[:id])
+  end
+
+  def update
+    @customer = Customer.find_by(id: params[:id])
+
+    if @customer.save
+      flash[:notice] = "Update customer's info."
+      redirect_to("/customers/#{@customer.id}")
+    else
+      @errors = @customer.errors
+      render("customer/edit")
+    end
   end
 end
