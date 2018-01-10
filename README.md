@@ -24,7 +24,7 @@
 |-|-|
 |name|String|
 |company|String|
-|telephone|Integer|
+|telephone|String|
 |email|String|
 |address|String|
 
