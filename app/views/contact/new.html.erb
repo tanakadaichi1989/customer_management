@@ -1,2 +1,39 @@
-<h1>Contact#new</h1>
-<p>Find me in app/views/contact/new.html.erb</p>
+<% provide(:title, "Make Contact Histroy") %>
+<% provide(:button, "Make Contact Histroy") %>
+
+<h1>Make Contact History</h1>
+
+<% if @errors %>
+<div class="alert alert-danger">
+  <% @errors.full_messages.each do |message| %>
+    <%= message %><br>
+  <% end %>
+</div>
+<% end %>
+
+
+<%= form_tag("#",method:"post") do %>
+    <div class="input">
+    <input type="" name="name" placeholder="name">
+    </div>
+
+    <div class="input">
+    <input type="" name="company" placeholder="company">
+    </div>
+
+    <div class="input">
+    <input type="" name="email" placeholder="email">
+    </div>
+
+    <div class="input">
+    <input type="" name="telephone" placeholder="telephone">
+    </div>
+
+    <div>
+    <input type="" name="address" placeholder="address">
+    </div>
+
+    <div>
+    <input type="submit" class="btn btn-primary" value="<%= yield(:button) %>">
+    </div>
+<% end %>
