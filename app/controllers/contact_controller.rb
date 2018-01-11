@@ -11,9 +11,7 @@ class ContactController < ApplicationController
 
   def new
     @staff_lists = Staff.all
-
     @customer_lists = Customer.all
-
     @contact_ways = ["Tel","Email","Appointment","Other"]
   end
 
@@ -22,10 +20,15 @@ class ContactController < ApplicationController
 
     if @contact.save
       flash[:notice] = "Created new contact history."
-      redirect_to "/"
+      redirect_to "/contact/new"
     else
-      @errrors = @contact.errors
+      @staff_lists = Staff.all
+      @customer_lists = Customer.all
+      @contact_ways = ["Tel","Email","Appointment","Other"]
+
+
       render "contact/new"
+      flash[:danger] = "Please confirm contact from."
     end
   end
 
