@@ -36,6 +36,7 @@
 |contact_day|Date|
 |contact_way|String|
 |memo|text|
+|contact_staff_id|Integer|
 
 ## 利用する技術
 BootStrap
