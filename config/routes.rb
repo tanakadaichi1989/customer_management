@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   get 'contact/show'
 
-  get 'contact/new'
+  get 'contact/new' => "contact#new"
+
+  post 'contact/create' => "contact#create"
 
   get 'contact/edit'
 
