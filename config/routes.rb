@@ -9,9 +9,11 @@ Rails.application.routes.draw do
 
   post 'contact/create' => "contact#create"
 
-  get 'contact/edit'
-
    get 'contact/:id' => "contact#show"
+
+   get 'contact/:id/edit' => "contact#edit"
+
+   post 'contact/:id/update' => "contact#update"
 
   get '/register' => 'customer#new'
 

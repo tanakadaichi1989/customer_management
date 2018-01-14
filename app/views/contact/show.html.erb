@@ -8,3 +8,9 @@
     <tr><td>memo:</td><td><%= @contact.memo %></td></tr>
   </tbody>
 </table>
+
+<div>
+  <form action="<%= "/contact/#{@contact.id}/edit" %>" method="get" >
+      <button type="submit" class="btn btn-primary">Edit Contact Info</button>
+  </form>
+</div>

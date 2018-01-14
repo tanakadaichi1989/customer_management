@@ -35,9 +35,26 @@ class ContactController < ApplicationController
   end
 
   def edit
+    @staff_lists = Staff.all
+    @customer_lists = Customer.all
+    @contact_ways = ["Tel","Email","Appointment","Other"]
+
+    @contact = Contact.find_by(id: params[:id])
   end
 
   def update
+    @contact = Contact.find_by(id: params[:id])
+    @contact.contact_day = params[:contact_day]
+    @contact.contact_way = params[:contact_way]
+    @contact.memo = params[:memo]
+
+    if @contact.save
+      flash[:notice] = "Update contact history."
+      redirect_to "/contact/#{@contact.id}"
+    else
+      render "contact/edit"
+      flash[:danger] = "Please confirm contact from."
+    end
   end
 
   def destroy
