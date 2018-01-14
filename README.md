@@ -1,4 +1,5 @@
 # customer_management
+<img src=”https://raw.github.com/wiki/tanakadaichi1989/customer_management/image.png”>
 
 ## Staffコントローラ
 ・新規登録
