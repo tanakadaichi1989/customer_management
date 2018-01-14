@@ -1,5 +1,5 @@
 # customer_management
-![タイトル](https://github.com/wiki/tanakadaichi1989/customer_management/image.png)
+![image]("https://github.com/wiki/tanakadaichi1989/customer_management/image.png")
 
 ## Staffコントローラ
 ・新規登録
