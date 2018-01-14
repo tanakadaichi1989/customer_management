@@ -3,13 +3,15 @@ Rails.application.routes.draw do
 
   get 'contact/index'
 
-  get 'contact/show'
+
 
   get 'contact/new' => "contact#new"
 
   post 'contact/create' => "contact#create"
 
   get 'contact/edit'
+
+   get 'contact/:id' => "contact#show"
 
   get '/register' => 'customer#new'
 
