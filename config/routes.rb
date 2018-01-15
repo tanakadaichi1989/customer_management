@@ -30,12 +30,15 @@ Rails.application.routes.draw do
 
   post '/customers/:id/update' => "customer#update"
 
+   get '/staff/:id' => "staff#show"
+
 
   get '/signup' => "staff#new"
 
   post '/signup' => "staff#create"
 
   get '/login' => "staff#login_form"
+
 
   post '/login' => "staff#login"
 

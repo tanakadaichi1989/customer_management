@@ -1,8 +1,9 @@
 class StaffController < ApplicationController
 
   before_action :set_current_staff
-  before_action :authenticate_staff,only:[:home,:logout]
+  before_action :authenticate_staff,only:[:home,:logout,:show]
   before_action :forbid_login_staff,only:[:new,:create,:login_form,:login]
+  before_action :ensure_login_staff,only:[:show,:edit,:update]
 
   def home
   end
@@ -47,6 +48,13 @@ class StaffController < ApplicationController
   def forbid_login_staff
     if @current_staff != nil
       flash[:info] = "You are already login."
+      redirect_to("/")
+    end
+  end
+
+  def ensure_login_staff
+    if @current_staff.id != params[:id].to_i
+      flash[:danger] = "You don't have Access rights."
       redirect_to("/")
     end
   end

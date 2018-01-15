@@ -18,7 +18,8 @@
       </button>
       <div class="dropdown-menu">
         <% if @current_staff != nil %>
-        <a class="dropdown-item" href="#">Now login as: <%= @current_staff.name %></a>
+       <%= link_to("/staff/#{@current_staff.id}",class: "dropdown-item") do %><%= @current_staff.name %><% end %>
+
         <a class="dropdown-item" href="/">Home</a>
         <a class="dropdown-item" href="/register">Register New Customer</a>
         <a class="dropdown-item" href="/contact/new">Make Conatct History</a>
