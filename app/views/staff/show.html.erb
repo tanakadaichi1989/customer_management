@@ -1,0 +1,21 @@
+<h1><%= @staff.name %></h1>
+
+<div>
+<p>Count: <b><%= @contacts.count %></b> | Tel: <b><%= @contacts.where(contact_way: "Tel").count %></b> | Appointment: <b><%= @contacts.where(contact_way: "Appointment").count %></b><p>
+</div>
+
+
+<table class="table table-striped search-table">
+  <thead>
+    <tr>
+      <th>Contacts this staff made</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @contacts.each do |contact| %>
+    <tr>
+        <td><%= link_to("/contact/#{contact.id}") do%><%= contact.contact_day %> | <%= contact.customer %> <% end %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

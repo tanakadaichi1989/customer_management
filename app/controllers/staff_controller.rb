@@ -11,6 +11,11 @@ class StaffController < ApplicationController
   def new
   end
 
+  def show
+    @staff = Staff.find_by(id: params[:id])
+    @contacts = @staff.contact
+  end
+
   def create
     @staff = Staff.new(name: params[:name], email: params[:email], password: params[:password])
 
