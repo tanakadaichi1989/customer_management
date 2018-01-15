@@ -5,6 +5,7 @@
     <tr><td>Staff:</td><td><%= Staff.find_by(id: @contact.staff_id).name %></td></tr>
     <tr><td>Customer:</td><td><%= Customer.find_by(id: @contact.customer_id).company %></td></tr>
     <tr><td>Contact day:</td><td><%= @contact.contact_day %></td></tr>
+    <tr><td>How to contact:</td><td><%= @contact.contact_way %></td></tr>
     <tr><td>memo:</td><td><%= @contact.memo %></td></tr>
   </tbody>
 </table>

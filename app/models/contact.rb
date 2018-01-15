@@ -16,10 +16,9 @@ class Contact < ApplicationRecord
     return staff
   end
 
-  def self.search(customer)
-    if customer
-      customer = Customer.where(['company LIKE ?','%#{search}%'])
-      Contact.where(['customer_id LIKE ?','#{customer.id}'])
+  def self.search(search)
+    if search
+      Contact.where(Contact.arel_table[:id].matches("%#{search}%"))
     else
       Contact.all
     end

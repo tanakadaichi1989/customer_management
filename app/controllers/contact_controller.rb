@@ -4,7 +4,7 @@ class ContactController < ApplicationController
   before_action :authenticate_staff
 
   def index
-    @contacts = Contact.search(params[:search]).order(contact_day: :desc)
+    @contacts = Contact.search(params[:search])
   end
 
   def show
