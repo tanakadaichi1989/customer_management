@@ -54,6 +54,15 @@ footer{
   z-index:10;
   background-color:gray;
   width:100%;
+
+  p{
+    margin-left:10px;
+  }
+
+  a{
+    font-weight:bolder;
+    color:black;
+  }
 }
 
 form{
