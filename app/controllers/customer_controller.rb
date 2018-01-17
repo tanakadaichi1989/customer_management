@@ -1,6 +1,7 @@
 class CustomerController < ApplicationController
   before_action :set_current_staff
   before_action :authenticate_staff
+  before_action :set_new_customer, only:[:new,:create]
   before_action :set_customer,only:[:show,:edit,:update]
 
   def index
@@ -8,15 +9,12 @@ class CustomerController < ApplicationController
   end
 
   def new
-    @customer = Customer.new(name: params[:name], company: params[:compnay], email: params[:email], telephone: params[:telephone], address: params[:address])
   end
 
   def show
   end
 
   def create
-    @customer = Customer.new(name: params[:name], company: params[:company], email: params[:email], telephone: params[:telephone], address: params[:address])
-
     if @customer.save
       flash[:notice] = "Successed register new customer."
       redirect_to("/customers")
@@ -38,6 +36,10 @@ class CustomerController < ApplicationController
       @errors = @customer.errors
       render("customer/edit")
     end
+  end
+
+  def set_new_customer
+     @customer = Customer.new(name: params[:name], company: params[:company], email: params[:email], telephone: params[:telephone], address: params[:address])
   end
 
   def set_customer
