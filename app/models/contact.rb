@@ -18,7 +18,10 @@ class Contact < ApplicationRecord
 
   def self.search(search)
     if search
-      Contact.where(Contact.arel_table[:id].matches("%#{search}%"))
+      #Contact.where(Contact.arel_table[:customer_id].matches("%#{search}%"))
+      customer = Customer.where(company: search)
+      contact = Contact.where(customer_id: customer)
+      return contact
     else
       Contact.all
     end
