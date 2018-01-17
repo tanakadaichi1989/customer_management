@@ -1,0 +1,7 @@
+<div>
+  <%= line_chart @chart_data %>
+</div>
+
+<div>
+<p>Count: <b><%= @contacts.count %></b> | Tel: <b><%= @contacts.where(contact_way: "Tel").count %></b> | Email: <b><%= @contacts.where(contact_way: "Email").count %></b> | Appointment: <b><%= @contacts.where(contact_way: "Appointment").count %></b><p>
+</div>
