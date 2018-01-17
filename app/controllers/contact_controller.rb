@@ -2,13 +2,13 @@ class ContactController < ApplicationController
 
   before_action :set_current_staff
   before_action :authenticate_staff
+  before_action :set_contact,only:[:show,:edit,:update]
 
   def index
     @contacts = Contact.search(params[:search])
   end
 
   def show
-    @contact = Contact.find_by(id: params[:id])
   end
 
   def new
@@ -39,12 +39,9 @@ class ContactController < ApplicationController
     @staff_lists = Staff.all
     @customer_lists = Customer.all
     @contact_ways = ["Tel","Email","Appointment","Other"]
-
-    @contact = Contact.find_by(id: params[:id])
   end
 
   def update
-    @contact = Contact.find_by(id: params[:id])
     @contact.contact_day = params[:contact_day]
     @contact.contact_way = params[:contact_way]
     @contact.memo = params[:memo]
@@ -59,6 +56,10 @@ class ContactController < ApplicationController
   end
 
   def destroy
+  end
+
+  def set_contact
+    @contact = Contact.find_by(id: params[:id])
   end
 
 end
