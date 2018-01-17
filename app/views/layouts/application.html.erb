@@ -10,49 +10,9 @@
   </head>
 
   <body>
-    <header id="header">
-      <h1>Customer Management</h1>
+    <%= render('layouts/header') %>
 
-      <div class="btn-group" id="header-list">
-      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Menu
-      </button>
-      <div class="dropdown-menu">
-        <% if @current_staff != nil %>
-       <%= link_to("/staff/#{@current_staff.id}",class: "dropdown-item") do %><%= @current_staff.name %><% end %>
-
-        <a class="dropdown-item" href="/">Home</a>
-        <a class="dropdown-item" href="/register">Register New Customer</a>
-        <a class="dropdown-item" href="/contact/new">Make Conatct History</a>
-        <a class="dropdown-item" href="/contact/index">Search Contact History</a>
-        <a class="dropdown-item" href="/customers">Customers</a>
-        <div class="dropdown-divider"></div>
-        <%= link_to("Log out","/logout",method:"post",class: "dropdown-item") %>
-        <% else %>
-        <a class="dropdown-item" href="/login">Log in</a>
-        <a class="dropdown-item" href="/signup">Sign up</a>
-        <% end %>
-      </div>
-    </div>
-    </header>
-
-    <% if flash[:notice] %>
-    <div id="flash" class="alert alert-success">
-      <%= flash[:notice] %>
-    </div>
-    <% end %>
-
-    <% if flash[:danger] %>
-    <div id="flash" class="alert alert-danger">
-      <%= flash[:danger] %>
-    </div>
-    <% end %>
-
-    <% if flash[:info] %>
-    <div id="flash" class="alert alert-info">
-      <%= flash[:info] %>
-    </div>
-    <% end %>
+    <%= render('layouts/flash') %>
 
     <div id="yield">
       <%= yield %>

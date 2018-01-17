@@ -4,13 +4,7 @@
 
 <h1>Sing Up</h1>
 
-<% if @errors %>
-<div class="alert alert-danger">
-  <% @errors.full_messages.each do |message| %>
-    <%= message %><br>
-  <% end %>
-</div>
-<% end %>
+<%= render('staff/errors') %>
 
 
 <%= form_tag("/signup",method:"post") do %>
