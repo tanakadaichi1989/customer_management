@@ -1,6 +1,7 @@
 class CustomerController < ApplicationController
   before_action :set_current_staff
   before_action :authenticate_staff
+  before_action :set_customer,only:[:show,:edit,:update]
 
   def index
     @customers = Customer.all
@@ -11,7 +12,6 @@ class CustomerController < ApplicationController
   end
 
   def show
-    @customer = Customer.find_by(id: params[:id])
   end
 
   def create
@@ -27,11 +27,9 @@ class CustomerController < ApplicationController
   end
 
   def edit
-    @customer = Customer.find_by(id: params[:id])
   end
 
   def update
-    @customer = Customer.find_by(id: params[:id])
 
     if @customer.save
       flash[:notice] = "Update customer's info."
@@ -40,5 +38,9 @@ class CustomerController < ApplicationController
       @errors = @customer.errors
       render("customer/edit")
     end
+  end
+
+  def set_customer
+    @customer = Customer.find_by(id: params[:id])
   end
 end
