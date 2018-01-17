@@ -40,5 +40,10 @@
 |contacted_staff_id|Integer|
 
 ## 利用する技術
-BootStrap
-BCRypt
+
+### BootStrap
+CSS/JavaScriptライブラリ
+
+### Chartkick
+Rails上でグラフを表示させるライブラリ
+
