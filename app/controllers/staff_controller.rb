@@ -14,6 +14,8 @@ class StaffController < ApplicationController
   def show
     @staff = Staff.find_by(id: params[:id])
     @contacts = @staff.contact
+
+    @chart_data = @contacts.order('contact_day ASC').group(:contact_day).count
   end
 
   def create
