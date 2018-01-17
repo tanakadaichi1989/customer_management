@@ -6,48 +6,6 @@
 
 <%= form_tag("/contact/create",method:"post") do %>
 
-    <div class="input">
-      <p>Staff who make this contact history: <b><%= @current_staff.name %></b></p>
-    </div>
+<%= render('contact/form') %>
 
-    <div class="input">
-    <p>Staff who meet customer:</p>
-    <select name="contacted_staff_id">
-      <% @staff_lists.each do |staff| %>
-      <option value="<%= staff.id %>"><%= staff.name %></option>
-      <% end %>
-    </select>
-    </div>
-
-    <div class="input">
-    <p>Customer:</p>
-    <select name="customer_id">
-      <% @customer_lists.each do |customer| %>
-      <option value="<%= customer.id %>"><%= customer.company %></option>
-      <% end %>
-    </select>
-    </div>
-
-    <div class="input">
-    <p>When contact:</p>
-    <input type="" name="contact_day" placeholder="Enter contact day">
-    </div>
-
-    <div class="input">
-    <p>How to contact:</p>
-    <select name="contact_way">
-      <% @contact_ways.each do |contact_way| %>
-      <option value="<%= contact_way %>"><%= contact_way %></option>
-      <% end %>
-    </select>
-    </div>
-
-    <div class="input">
-    <textarea name="memo" placeholder="Please write detail infomation."></textarea>
-    </div>
-
-
-    <div>
-    <input type="submit" class="btn btn-primary" value="<%= yield(:button) %>">
-    </div>
 <% end %>

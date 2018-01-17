@@ -12,6 +12,7 @@ class ContactController < ApplicationController
   end
 
   def new
+    @contact = Contact.new
     @staff_lists = Staff.all
     @customer_lists = Customer.all
     @contact_ways = ["Tel","Email","Appointment","Other"]
