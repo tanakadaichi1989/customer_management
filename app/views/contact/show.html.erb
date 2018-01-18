@@ -2,8 +2,8 @@
 
 <table class="table table-striped" id="search-table">
   <tbody>
-    <tr><td>Staff:</td><td><%= Staff.find_by(id: @contact.staff_id).name %></td></tr>
-    <tr><td>Customer:</td><td><%= Customer.find_by(id: @contact.customer_id).company %></td></tr>
+    <tr><td>Staff:</td><td><%= staff_name(@contact) %></td></tr>
+    <tr><td>Customer:</td><td><%= company_name(@contact) %></td></tr>
     <tr><td>Contact day:</td><td><%= @contact.contact_day %></td></tr>
     <tr><td>How to contact:</td><td><%= @contact.contact_way %></td></tr>
     <tr><td>memo:</td><td><%= @contact.memo %></td></tr>
@@ -15,3 +15,4 @@
       <button type="submit" class="btn btn-primary">Edit Contact Info</button>
   </form>
 </div>
+
