@@ -37,7 +37,7 @@ Webを閲覧できる環境があれば、社内・社外そしてPC・タブレ
 |-|-|
 |name|String|
 |email|String|
-|password|String|
+|password_digest|String|
 
 ### Customerモデル
 |カラム|型|
