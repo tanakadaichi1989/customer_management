@@ -1,5 +1,6 @@
 # customer_management
 ![image](https://github.com/tanakadaichi1989/customer_management/blob/master/image.png)
+![image](https://github.com/tanakadaichi1989/customer_management/blob/master/image2.png)
 
 ## 作成したアプリ：顧客管理アプリ
 ### どんなアプリ？
