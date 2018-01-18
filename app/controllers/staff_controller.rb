@@ -16,6 +16,8 @@ class StaffController < ApplicationController
     @contacts = @staff.contact
 
     @chart_data = @contacts.order('contact_day ASC').group(:contact_day).count
+
+    @contact_ways = ["Tel","Email","Appointment","Other"]
   end
 
   def create
