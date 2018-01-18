@@ -58,7 +58,7 @@ Webを閲覧できる環境があれば、社内・社外そしてPC・タブレ
 |memo|text|
 |contacted_staff_id|Integer|
 
-## 利用する技術
+## 利用した技術
 
 ### BootStrap
 CSS/JavaScriptライブラリ
