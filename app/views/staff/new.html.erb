@@ -8,21 +8,9 @@
 
 
 <%= form_tag("/signup",method:"post") do %>
-    <div class="input">
-    <input type="" name="name" placeholder="name">
-    </div>
 
-    <div class="input">
-    <input type="" name="email" placeholder="email">
-    </div>
+    <%= render('staff/form') %>
 
-    <div class="input">
-    <input type="password" name="password" placeholder="password">
-    </div>
-
-    <div>
-    <input type="submit" class="btn btn-primary" value="<%= yield(:button) %>">
-    </div>
 <% end %>
 
 <a href="/login">Log In →</a>
