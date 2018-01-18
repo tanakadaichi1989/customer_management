@@ -19,27 +19,27 @@ Webを閲覧できる環境があれば、社内・社外そしてPC・タブレ
 → 顧客に向かう時間の増大
 
 
-
-## Staffコントローラ
+## コントローラ・モデル
+### Staffコントローラ
 ・新規登録
 ・ログイン/ログオフ機能
 
-## Customerコントローラ
+### Customerコントローラ
 ・新規登録
 
-## Contactコントローラ
+### Contactコントローラ
 ・接触内容の登録
 ・接触内容の編集
 
 
-## Staffモデル
+### Staffモデル
 |カラム|型|
 |-|-|
 |name|String|
 |email|String|
 |password|String|
 
-## Customerモデル
+### Customerモデル
 |カラム|型|
 |-|-|
 |name|String|
@@ -48,7 +48,7 @@ Webを閲覧できる環境があれば、社内・社外そしてPC・タブレ
 |email|String|
 |address|String|
 
-## Contactモデル
+### Contactモデル
 |カラム|型|
 |-|-|
 |staff_id|Integer|
