@@ -66,6 +66,9 @@ CSS/JavaScriptライブラリ
 ### Chartkick
 Rails上でグラフを表示させるライブラリ
 
+### BCRypt
+パスワード暗号化
+
 ## その他
 制作費用： ¥0-.
 
