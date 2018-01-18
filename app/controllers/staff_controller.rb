@@ -34,9 +34,9 @@ class StaffController < ApplicationController
   end
 
   def login
-    @staff = Staff.find_by(email: params[:email], password: params[:password])
+    @staff = Staff.find_by(email: params[:email])
 
-    if @staff
+    if @staff && @staff.authenticate(params[:password])
       session[:user_id] = @staff.id
       flash[:notice] = "Successed Log in."
       redirect_to("/")
