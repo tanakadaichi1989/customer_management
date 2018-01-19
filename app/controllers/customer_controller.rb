@@ -12,6 +12,7 @@ class CustomerController < ApplicationController
   end
 
   def show
+      @contacts = Contact.where(customer_id: params[:id])
   end
 
   def create
