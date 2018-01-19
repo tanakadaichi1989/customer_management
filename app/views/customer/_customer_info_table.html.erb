@@ -1,0 +1,22 @@
+<h1><%= @customer.company %></h1>
+
+<table class="customer-info-table table table-inverse">
+
+  <thead>
+    <tr>
+      <th>Company</th><th>Staff Name</th><th>Email</th><th>TEL</th><th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @customer.company%></td><td><%= @customer.name %></td><td><%= @customer.email %></td><td><%= @customer.telephone %><td><%= @customer.address %></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div>
+  <form action="<%= "/customers/#{@customer.id}/edit" %>" method="get" >
+      <button type="submit" class="btn btn-primary">Edit Company Info</button>
+  </form>
+</div>

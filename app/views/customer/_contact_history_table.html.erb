@@ -1,0 +1,18 @@
+<div id="contact_histroy_with_our_company">
+  <h2>Contact History with our company</h2>
+  <table class="customer-info-table table table-striped">
+
+  <thead>
+    <tr>
+      <th>Contact day</th><th>Contact Staff</th><th>How to contact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @contacts.each do |contact|%>
+    <tr>
+      <td><%= contact.contact_day %></td><td><%= contact_staff(contact) %></td><td><%= contact.contact_way %></td><td><%= link_to("show","/contact/#{contact.id}") %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
