@@ -7,10 +7,9 @@
 ### 下記アドレスよりログインが可能
 https://customer-management-20180120.herokuapp.com/login
 
-> アドレス：sample@sample.com
-> パスワード：samplesample
+> アドレス：sample@sample.com / パスワード：samplesample
 
-**お願い**
+### お願い
 あくまでもポートフォリオとして作成したものです。
 新規登録（SignUp）をせず、ログイン（LogIn）してください。
 
