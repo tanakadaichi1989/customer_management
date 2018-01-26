@@ -108,13 +108,30 @@ form{
 
 #header{
   h1{
-    font-size:20px;
+    font-size:25px;
+    margin-top:10px;
   }
 }
 
 footer{
   p{
-    font-size:5px;
+    font-size:15px;
+  }
+}
+}
+
+/*tablet*/
+@media screen and (min-width:461px) and (max-width:960px){
+#header{
+  h1{
+    font-size:25px;
+    margin-top:10px;
+  }
+}
+
+footer{
+  p{
+    font-size:15px;
   }
 }
 }
