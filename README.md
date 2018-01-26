@@ -3,6 +3,21 @@
 ![image](https://github.com/tanakadaichi1989/customer_management/blob/master/image2.png)
 
 ## 作成したアプリ：顧客管理アプリ
+
+### 下記アドレスよりログインが可能
+https://customer-management-20180120.herokuapp.com/login
+
+> アドレス：sample@sample.com
+> パスワード：samplesample
+
+**お願い**
+あくまでもポートフォリオとして作成したものです。
+新規登録（SignUp）をせず、ログイン（LogIn）してください。
+
+また、このサイトに登録しているアドレス・電話番号・住所はすべてダミーです。
+実在する情報を登録しないでください。
+
+
 ### どんなアプリ？
 どのスタッフが、どんな方法で、いつクライアントと接触したか管理するアプリ
 
